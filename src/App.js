@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import firebase from './plugins/firebase';
 import ChatBox from './components/Assemble/ChatBox';
 
-function App() {
+const Wrapper = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+`
+
+const App = () => {
   const [messages, setMessage] = useState([])
 
   const handleSubmit = (value) => {
-    firebase.database().ref('/messages').push({
-      message: value
-    });
+    if(value) {
+      firebase.database().ref('/messages').push({
+        message: value
+      }); 
+    }
   }
 
   useEffect(() => {
@@ -28,12 +35,12 @@ function App() {
   }, [])
 
   return (
-    <>
+    <Wrapper>
       <ChatBox
         messages={messages}
         onSubmit={handleSubmit}
       />
-    </>
+    </Wrapper>
   );
 }
 
