@@ -10,7 +10,6 @@ const Container = styled.div`
   height: 300px;
   padding: 10px;
   overflow-y: auto;
-  background-color: #fff;
 `
 
 const Wrapper = styled.div`

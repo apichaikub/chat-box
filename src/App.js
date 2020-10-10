@@ -8,6 +8,7 @@ const Wrapper = styled.div`
 `
 
 const App = () => {
+  
   const [messages, setMessage] = useState([])
 
   const handleSubmit = (value) => {

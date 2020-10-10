@@ -1,6 +1,7 @@
 import React from 'react';
 import ChatBoxInput from '../components/Combine/ChatBoxInput';
 import ChatBoxMessage from '../components/Combine/ChatBoxMessage';
+import Circle from '../components/Combine/Circle';
 
 export default {
   title: 'Combine',
@@ -32,3 +33,9 @@ export const chatBoxMessage = () => {
       />
     )
   }
+
+  export const circel = () => {
+    return (
+      <Circle />
+    )
+  }  
