@@ -12,10 +12,10 @@ const Text = styled.div`
   padding-right: 12px;
   padding-left: 12px;
   padding-bottom: 8px;
-  background-color: rgb(0, 132, 255);
+  background-color: #f6d80e;
   border-radius: 18px;
   word-break: break-word;
-  color: rgb(255, 255, 255);
+  color: #58574e;
 `;
 
 const Message = ({ type, value, position }) => {

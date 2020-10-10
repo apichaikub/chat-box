@@ -5,7 +5,7 @@ const Button = styled.button`
   height: 36px;
   background-color: transparent;
   border: none;
-  color: #216fdb;
+  color: #eed000;
   cursor: pointer;
 `;
 

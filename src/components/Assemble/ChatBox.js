@@ -15,6 +15,7 @@ const ContainerChat = styled.div`
   border-radius: 8px;
   visibility: hidden;
   transform: scale(0); 
+
   &.show {
     visibility: visible;
     transition: all .2s ease-in-out;
@@ -30,6 +31,18 @@ const WrapperCircle = styled.div`
   position: fixed;
   right: 20px;
   bottom: 20px;
+  
+  button {
+    background-color: #f6d80e;
+  }
+
+  svg {
+    color: rgba(255, 255, 255, .5);
+  }
+
+  &.show svg {
+    color: rgba(255, 255, 255, 1);
+  }
 `
 
 const ChatBox = ({ messages, onSubmit }) => {
@@ -47,7 +60,7 @@ const ChatBox = ({ messages, onSubmit }) => {
           <ChatBoxInput onSubmit={onSubmit} />
         </WrapperInput>
       </ContainerChat>
-      <WrapperCircle>
+      <WrapperCircle className={showChatBox ? 'show' : ''}>
         <Circle onClick={handleClickCircle}/>
       </WrapperCircle>
     </>

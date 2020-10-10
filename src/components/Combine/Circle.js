@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Icon from '../Base/Icon';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
  
-const Wrapper = styled.button`
+const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,13 +15,18 @@ const Wrapper = styled.button`
   cursor: pointer;
 `;
 
+const WrapperIcon = styled.span`
+  font-size: 24px;
+  color: #111;
+`
+
 const Circle = (props) => {
   return (
-    <Wrapper {...props}>
-      <span>
-        xxxx
-      </span>
-    </Wrapper>
+    <Container {...props}>
+      <WrapperIcon>
+        <Icon icon={faLightbulb} />
+      </WrapperIcon>
+    </Container>
   )
 };
 

@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import Input from '../Base/Input';
 import Button from '../Base/Button';
+import Icon from '../Base/Icon';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Container = styled.div`
   display: flex;
@@ -13,6 +15,10 @@ const WrapperInput = styled.div`
 
 const WrapperButton = styled.div`
   width: 80px;
+`
+
+const WrapperIcon = styled.span`
+  margin-left: 5px;
 `
 
 const ChatBoxInput = ({ onSubmit }) => {
@@ -42,7 +48,12 @@ const ChatBoxInput = ({ onSubmit }) => {
         <Input ref={inputRef} onKeyPress={handleInputKeyPress} onChange={handleInputChange} value={value}/>
       </WrapperInput>
       <WrapperButton>
-        <Button onClick={handleButtonClick}>Sent</Button>
+        <Button onClick={handleButtonClick}>
+          Sent
+          <WrapperIcon>
+            <Icon icon={faPaperPlane} />
+          </WrapperIcon>
+        </Button>
       </WrapperButton>
     </Container>
   );
