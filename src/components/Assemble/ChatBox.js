@@ -1,14 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+import ChatBoxInput from '../Combine/ChatBoxInput';
+import ChatBoxMessage from '../Combine/ChatBoxMessage';
 
-const ChatBox = () => {
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+`
+
+const ChatBox = ({ messages, onSubmit }) => {
   return (
-    <div className="yl-container">
-      <ul className="yl-container-chat">
-        <li className="yl-container-chat-message">
-          Hi
-        </li>
-      </ul>
-  </div>
+    <Container>
+      <ChatBoxMessage items={messages}/>
+      <ChatBoxInput onSubmit={onSubmit} />
+    </Container>
   )
 }
 
