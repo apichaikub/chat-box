@@ -46,7 +46,7 @@ const WrapperCircle = styled.div`
 `
 
 const ChatBox = ({ messages, onSubmit }) => {
-  const [showChatBox, setShowChatBox] = useState(true);
+  const [showChatBox, setShowChatBox] = useState(false);
 
   const handleClickCircle = () => {
     setShowChatBox(!showChatBox)
