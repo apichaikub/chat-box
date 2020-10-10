@@ -7,6 +7,21 @@ export default {
 
 export const chatBox = () => {
   return (
-    <ChatBox />
+    <ChatBox
+      messages={[
+        {
+          id: 1,
+          message: 'Hi',
+          type: 'text',
+          position: 'left'
+        },
+        {
+          id: 1,
+          message: 'Hello',
+          type: 'text',
+          position: 'right'
+        }
+      ]}
+    />
   )
 }

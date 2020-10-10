@@ -14,6 +14,21 @@ export const chatBoxInput = () => {
 
 export const chatBoxMessage = () => {
     return (
-      <ChatBoxMessage />
+      <ChatBoxMessage
+        items={[
+          {
+            id: 1,
+            message: 'Hi',
+            type: 'text',
+            position: 'left'
+          },
+          {
+            id: 1,
+            message: 'Hello',
+            type: 'text',
+            position: 'right'
+          }
+        ]}
+      />
     )
   }
