@@ -51,11 +51,11 @@
     "@storybook/node-logger": "^6.0.26",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
-    "babel-jest": "^26.5.2",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "jest": "^26.5.2",
+    "jest": "24.9.0",
     "react-is": "^16.13.1"
   }
 }
