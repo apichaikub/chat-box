@@ -10,7 +10,13 @@ export const getElmHeight = (node) => {
   ]
 
   const style = window.getComputedStyle(node)
+
   return list
-      .map(k => parseInt(style.getPropertyValue(k), 10))
-      .reduce((prev, cur) => prev + cur)
+    .map((key) => {
+      const number = parseInt(style.getPropertyValue(key) || 0, 10);
+      return number
+    })
+    .reduce((acc, cur) => {
+      return acc + cur
+    }, 0)
 }

@@ -19,7 +19,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:ui": "jest jest src/test/ui/**/**/*.js",
+    "test:ui:watch": "jest src/test/ui/**/**/*.js --watch",
+    "test:unit": "jest src/test/unit/**/*.js",
+    "test:unit:watch": "jest src/test/unit/**/*.js --watch",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -47,7 +51,11 @@
     "@storybook/node-logger": "^6.0.26",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
+    "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest": "^26.5.2",
     "react-is": "^16.13.1"
   }
 }
